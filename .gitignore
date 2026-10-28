@@ -10,7 +10,7 @@ report/build/package-lock.json
 *.docx.tmp
 *.tmp
 
-# Old duplicate report versions (submit the -Shubham-Shinde-2125UCSM1042 one)
+# Old duplicate report versions (submit the -Chetan-Kharade-2125UCSM1012 one)
 report/Malware-Analysis-Sandbox-Lab-Report.docx
 report/Malware-Analysis-Sandbox-Lab-Report-patched.docx
 

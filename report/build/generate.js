@@ -553,7 +553,7 @@ const pageHeader = new Header({
 });
 
 const doc = new Document({
-  creator: "Shubham Shinde (PRN 2125UCSM1042)",
+  creator: "Chetan Kharade (PRN 2125UCSM1012)",
   title: "Malware Analysis Sandbox Lab - Capstone Report",
   styles: {
     default: {
@@ -579,8 +579,8 @@ const doc = new Document({
         subtitle: "Reverse & Bind Shell Behaviour in an Isolated Virtual Machine",
         englishLabel: "CAPSTONE PROJECT REPORT",
         metaLines: [
-          "Submitted by: Shubham Shinde",
-          "PRN: 2125UCSM1042",
+          "Submitted by: Chetan Kharade",
+          "PRN: 2125UCSM1012",
           "Hypervisor: VMware Workstation 26.0 (host-only networking)",
           "Guest OS: Debian 13.7 'trixie' - kernel 6.12.107-1",
           "Snapshot: 01-CLEAN-BASELINE (revert verified)",
@@ -625,7 +625,7 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then((buf) => {
-  const out = path.resolve(__dirname, "..", "Malware-Analysis-Sandbox-Lab-Report-Shubham-Shinde-2125UCSM1042.docx");
+  const out = path.resolve(__dirname, "..", "Malware-Analysis-Sandbox-Lab-Report-Chetan-Kharade-2125UCSM1012.docx");
   fs.writeFileSync(out, buf);
   console.log("written:", out, buf.length, "bytes");
 });

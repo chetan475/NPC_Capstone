@@ -1,5 +1,9 @@
 # Malware Analysis Sandbox Lab — Capstone Project
 
+**Student:** Chetan Kharade  
+**PRN:** 2125UCSM1012  
+**Repository:** [https://github.com/chetan475/NPC_Capstone](https://github.com/chetan475/NPC_Capstone)  
+
 Topic: *Malware Analysis Sandbox Using VirtualBox or VMware* — built on **VMware Workstation 26**
 with **Debian 13.7 (trixie)** in a **host-only** (no-internet) network.
 
@@ -20,7 +24,8 @@ evidence logs, screenshots, and the submission report.
 | `build/lab_key.pub` | Public half of the throwaway analyst SSH key (private key is NOT committed — generate your own pair with `ssh-keygen -t ed25519` and put its `.pub` into the ISO as `authorized_keys`) |
 | `evidence/` | Timestamped transcripts of every stage (isolation, C2 sessions, persistence, restore) |
 | `evidence/screenshots/` | VM console screenshots captured from the guest framebuffer |
-| `report/Malware-Analysis-Sandbox-Lab-Report.docx` | **The submission report** (TOC updates with right-click → Update Field) |
+| `report/Malware-Analysis-Sandbox-Lab-Report-Chetan-Kharade-2125UCSM1012.docx` | **The submission report (Word)** (TOC updates with right-click → Update Field) |
+| `report/render/Malware-Analysis-Sandbox-Lab-Report-Chetan-Kharade-2125UCSM1012.pdf` | **The submission report (PDF)** |
 | `report/build/generate.js` | Node script that builds the DOCX report from the evidence |
 
 ## Lab network map
