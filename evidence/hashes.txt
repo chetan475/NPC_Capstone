@@ -1,0 +1,5 @@
+=== Payload hashes (host-side, SHA-256) ===
+0e206101e93fb971ea6c0b1d8f09ac7c14b128564af0b7858bd5259039e7d302 *payloads/lab_reverse.sh
+4144b221ce867830a2d08a52f235d351778e11ece29b262e3f4d9268f9c711f6 *payloads/lab_bind.sh
+2cdcb5a4dd24b04a8116b8cf62a5b281 *payloads/lab_reverse.sh
+9db308079f8d8e74ec67c9ebc1b8b071 *payloads/lab_bind.sh

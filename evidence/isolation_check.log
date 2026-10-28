@@ -1,0 +1,24 @@
+===============================================================
+  Malware Analysis Sandbox Lab  -  malware-lab (192.168.116.200)
+  ISOLATION VERIFICATION  -  2026-10-26 04:12:39 UTC
+===============================================================
+
+--- routing table (expect NO default route) ---
+192.168.116.0/24 dev enp0s17 proto kernel scope link src 192.168.116.200 
+
+--- DNS configuration (/etc/resolv.conf) ---
+0 /etc/resolv.conf
+
+--- test 1: DNS resolution of example.com ---
+DNS FAILED: gaierror - [Errno -3] Temporary failure in name resolution
+
+--- test 2: TCP connect 8.8.8.8:443 (internet) ---
+BLOCKED: OSError - [Errno 101] Network is unreachable
+
+--- test 3: ping host-only adapter 192.168.116.1 (expect OK) ---
+2 packets transmitted, 2 received, 0% packet loss, time 1006ms
+rtt min/avg/max/mdev = 0.491/0.682/0.874/0.191 ms
+
+--- test 4: ping 8.8.8.8 internet (expect FAIL) ---
+ping: connect: Network is unreachable
+===============================================================

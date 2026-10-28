@@ -1,0 +1,44 @@
+=== SIMULATED ATTACKER PERSISTENCE (post-exploitation) ===
+applied at 2026-10-26 06:37:02 UTC
+
+--- root crontab: @reboot persistence line added ---
+@reboot /usr/local/bin/.sysupdate # persistence
+
+--- /etc/passwd tail: backdoor account svcupdate ---
+sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
+labuser:x:1000:1000:Lab User,,,:/home/labuser:/bin/bash
+svcupdate:x:1001:1001::/home/svcupdate:/bin/bash
+
+--- /root: LOOT_MARKER.txt created ---
+-rwxr-xr-x  1 root root 1557 Oct 26 04:12 lab_bind.sh
+-rwxr-xr-x  1 root root 1016 Oct 26 04:12 lab_reverse.sh
+-rw-r--r--  1 root root   21 Oct 26 06:37 LOOT_MARKER.txt
+
+--- /usr/local/bin: dropped payload copy .sysupdate ---
+total 12
+drwxr-xr-x  2 root root 4096 Oct 26 06:37 .
+drwxr-xr-x 11 root root 4096 Oct 25 20:03 ..
+-rwxr-xr-x  1 root root 1016 Oct 26 06:37 .sysupdate
+===============================================================
+  POST-COMPROMISE STATE (simulated attacker persistence)
+  applied at 2026-10-26 06:37:02 UTC
+===============================================================
+
+--- root crontab: @reboot persistence added ---
+@reboot /usr/local/bin/.sysupdate # persistence
+
+--- backdoor account in /etc/passwd ---
+sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
+labuser:x:1000:1000:Lab User,,,:/home/labuser:/bin/bash
+svcupdate:x:1001:1001::/home/svcupdate:/bin/bash
+
+--- /root: LOOT_MARKER.txt + payloads ---
+-rwxr-xr-x  1 root root 1557 Oct 26 04:12 lab_bind.sh
+-rwxr-xr-x  1 root root 1016 Oct 26 04:12 lab_reverse.sh
+-rw-r--r--  1 root root   21 Oct 26 06:37 LOOT_MARKER.txt
+
+--- /usr/local/bin: dropped copy .sysupdate ---
+total 12
+drwxr-xr-x  2 root root 4096 Oct 26 06:37 .
+drwxr-xr-x 11 root root 4096 Oct 25 20:03 ..
+-rwxr-xr-x  1 root root 1016 Oct 26 06:37 .sysupdate

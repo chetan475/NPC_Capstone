@@ -1,0 +1,121 @@
+[2026-10-26 10:15:43] [LISTENER] waiting for reverse shell on 192.168.116.1:4444
+[2026-10-26 10:15:45] [CONNECT] reverse shell connected from 192.168.116.200:54102
+[2026-10-26 10:15:47] [BANNER] "/bin/sh: 0: can't access tty; job control turned off\n#"
+[2026-10-26 10:15:53] [CMD] id
+[OUT] uid=0(root) gid=0(root) groups=0(root)
+#
+[2026-10-26 10:15:59] [CMD] uname -a
+[OUT] Linux malware-lab 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64 GNU/Linux
+#
+[2026-10-26 10:16:04] [CMD] hostname
+[OUT] malware-lab
+#
+[2026-10-26 10:16:08] [CMD] pwd
+[OUT] /root
+#
+[2026-10-26 10:16:13] [CMD] whoami
+[OUT] root
+#
+[2026-10-26 10:16:18] [CMD] ls -la /root
+[OUT] total 36
+drwx------  4 root root 4096 Oct 26 04:13 .
+drwxr-xr-x 18 root root 4096 Oct 25 20:04 ..
+-rw-r--r--  1 root root  607 Jul 17 17:05 .bashrc
+drwx------  3 root root 4096 Oct 26 04:05 .config
+-rw-r--r--  1 root root  992 Oct 26 04:12 isolation.txt
+-rwxr-xr-x  1 root root 1557 Oct 26 04:12 lab_bind.sh
+-rwxr-xr-x  1 root root 1016 Oct 26 04:12 lab_reverse.sh
+-rw-r--r--  1 root root  132 Jul 17 17:05 .profile
+drwx------  2 root root 4096 Oct 25 20:05 .ssh
+#
+[2026-10-26 10:16:23] [CMD] cat /tmp/c2_beacon.txt
+[OUT] beacon started Mon Oct 26 04:17:35 AM UTC 2026
+#
+[2026-10-26 10:16:28] [CMD] tail -5 /etc/passwd
+[OUT] dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+systemd-timesync:x:991:991:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:990:990:System Message Bus:/nonexistent:/usr/sbin/nologin
+sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
+labuser:x:1000:1000:Lab User,,,:/home/labuser:/bin/bash
+#
+[2026-10-26 10:16:28] [DONE] closing session
+[2026-10-28 13:59:54] [LISTENER] waiting for reverse shell on 192.168.116.1:4444
+[2026-10-28 14:02:54] [TIMEOUT] no connection received
+[2026-10-28 14:32:39] [LISTENER] waiting for reverse shell on 192.168.116.1:4444
+[2026-10-28 14:32:42] [CONNECT] reverse shell connected from 192.168.116.200:40792
+[2026-10-28 14:32:44] [BANNER] "/bin/sh: 0: can't access tty; job control turned off\n#"
+[2026-10-28 14:32:51] [CMD] id
+[OUT] uid=0(root) gid=0(root) groups=0(root)
+#
+[2026-10-28 14:32:56] [CMD] uname -a
+[OUT] Linux malware-lab 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64 GNU/Linux
+#
+[2026-10-28 14:33:01] [CMD] hostname
+[OUT] malware-lab
+#
+[2026-10-28 14:33:06] [CMD] pwd
+[OUT] /root
+#
+[2026-10-28 14:33:10] [CMD] whoami
+[OUT] root
+#
+[2026-10-28 14:33:16] [CMD] ls -la /root
+[OUT] total 28
+drwx------  3 root root 4096 Oct 27 18:54 .
+drwxr-xr-x 18 root root 4096 Oct 25 20:04 ..
+-rw-r--r--  1 root root  607 Jul 17 17:05 .bashrc
+-rwxr-xr-x  1 root root 1557 Oct 27 18:54 lab_bind.sh
+-rwxr-xr-x  1 root root 1016 Oct 27 18:54 lab_reverse.sh
+-rw-r--r--  1 root root  132 Jul 17 17:05 .profile
+drwx------  2 root root 4096 Oct 25 20:05 .ssh
+#
+[2026-10-28 14:33:21] [CMD] cat /tmp/c2_beacon.txt
+[OUT] beacon started Wed Oct 28 09:02:42 AM UTC 2026
+#
+[2026-10-28 14:33:26] [CMD] tail -5 /etc/passwd
+[OUT] dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+systemd-timesync:x:991:991:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:990:990:System Message Bus:/nonexistent:/usr/sbin/nologin
+sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
+labuser:x:1000:1000:Lab User,,,:/home/labuser:/bin/bash
+#
+[2026-10-28 14:33:26] [DONE] closing session
+[2026-10-28 14:36:08] [LISTENER] waiting for reverse shell on 192.168.116.1:4444
+[2026-10-28 14:36:11] [CONNECT] reverse shell connected from 192.168.116.200:60146
+[2026-10-28 14:36:13] [BANNER] "/bin/sh: 0: can't access tty; job control turned off\n#"
+[2026-10-28 14:36:19] [CMD] id
+[OUT] uid=0(root) gid=0(root) groups=0(root)
+#
+[2026-10-28 14:36:25] [CMD] uname -a
+[OUT] Linux malware-lab 6.12.107+deb13-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.12.107-1 (2026-08-29) x86_64 GNU/Linux
+#
+[2026-10-28 14:36:30] [CMD] hostname
+[OUT] malware-lab
+#
+[2026-10-28 14:36:34] [CMD] pwd
+[OUT] /root
+#
+[2026-10-28 14:36:39] [CMD] whoami
+[OUT] root
+#
+[2026-10-28 14:36:44] [CMD] ls -la /root
+[OUT] total 28
+drwx------  3 root root 4096 Oct 28 09:06 .
+drwxr-xr-x 18 root root 4096 Oct 25 20:04 ..
+-rw-r--r--  1 root root  607 Jul 17 17:05 .bashrc
+-rwxr-xr-x  1 root root 1557 Oct 27 18:54 lab_bind.sh
+-rwxr-xr-x  1 root root 1016 Oct 27 18:54 lab_reverse.sh
+-rw-r--r--  1 root root  132 Jul 17 17:05 .profile
+drwx------  2 root root 4096 Oct 25 20:05 .ssh
+#
+[2026-10-28 14:36:49] [CMD] cat /tmp/c2_beacon.txt
+[OUT] beacon started Wed Oct 28 09:02:42 AM UTC 2026
+#
+[2026-10-28 14:36:54] [CMD] tail -5 /etc/passwd
+[OUT] dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
+systemd-timesync:x:991:991:systemd Time Synchronization:/:/usr/sbin/nologin
+messagebus:x:990:990:System Message Bus:/nonexistent:/usr/sbin/nologin
+sshd:x:989:65534:sshd user:/run/sshd:/usr/sbin/nologin
+labuser:x:1000:1000:Lab User,,,:/home/labuser:/bin/bash
+#
+[2026-10-28 14:36:54] [DONE] closing session

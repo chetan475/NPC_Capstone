@@ -1,0 +1,6 @@
+root        1064  0.0  0.1   7076  3468 ?        Ss   04:17   0:00 bash /root/lab_reverse.sh
+root        1067  0.0  0.0   2672  1772 ?        S    04:17   0:00 /bin/sh -i
+===
+tcp   ESTAB 0      0      192.168.116.200:54102 192.168.116.1:4444  users:(("sh",pid=1067,fd=3),("sh",pid=1067,fd=2),("sh",pid=1067,fd=1),("sh",pid=1067,fd=0))
+===
+beacon started Mon Oct 26 04:17:35 AM UTC 2026

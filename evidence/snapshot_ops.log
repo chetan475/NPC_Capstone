@@ -1,0 +1,9 @@
+=== snapshot ops log Tue Oct 27 11:41:38 IST 2026 ===
+Total running VMs: 1
+D:\VMs\malware-sandbox-lab\malware-sandbox-lab.vmx
+Total snapshots: 1
+01-CLEAN-BASELINE
+VM powered off cleanly
+Total snapshots: 1
+01-CLEAN-BASELINE
+reverted to 01-CLEAN-BASELINE

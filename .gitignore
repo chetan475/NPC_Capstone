@@ -1,0 +1,26 @@
+# Private key — NEVER commit (generate your own with ssh-keygen)
+build/lab_key
+
+# Node build artifacts
+report/build/node_modules/
+report/build/package-lock.json
+
+# Word lock files and temp artifacts
+~$*
+*.docx.tmp
+*.tmp
+
+# Old duplicate report versions (submit the -Shubham-Shinde-2125UCSM1042 one)
+report/Malware-Analysis-Sandbox-Lab-Report.docx
+report/Malware-Analysis-Sandbox-Lab-Report-patched.docx
+
+# QA render pages (PDF preview is kept)
+report/render/page-*.png
+
+# Local junk
+Thumbs.db
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc

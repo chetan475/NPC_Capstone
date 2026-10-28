@@ -1,0 +1,8 @@
+reverse still running:
+root        1104  0.0  0.0   2672  1680 ?        S    04:21   0:00 /bin/sh -i
+root        1164  0.0  0.1   7076  3456 ?        Ss   04:21   0:00 bash -c pkill -f "lab_[r]everse" 2>/dev/null; sleep 2; echo "reverse still running:"; ps auxww | grep -E "lab_[r]everse|sh -i" | head -3; echo "(empty=dead)"; setsid bash /root/lab_bind.sh </dev/null >/tmp/bind_stderr.log 2>&1 & sleep 3; echo === bind shell state ===; ps auxww | grep -E "lab_[b]ind|python3" | grep -v grep | head -4; ss -tulpn | grep 4445
+root        1168  0.0  0.1   6652  2288 ?        S    04:21   0:00 grep -E lab_[r]everse|sh -i
+(empty=dead)
+=== bind shell state ===
+root        1170  1.9  0.5  18468 10132 ?        Ss   04:21   0:00 python3 -
+tcp   LISTEN 0      5            0.0.0.0:4445      0.0.0.0:*    users:(("python3",pid=1170,fd=3))

@@ -1,0 +1,66 @@
+===============================================================
+  POST-RESTORE VERIFICATION - reverted to 01-CLEAN-BASELINE
+  verified at 2026-10-27 06:12:44 UTC
+===============================================================
+
+--- 1. root crontab (expect: no crontab) ---
+no crontab for root
+
+--- 2. backdoor account svcupdate (expect: absent) ---
+PASS: svcupdate not present in /etc/passwd
+
+--- 3. /root/LOOT_MARKER.txt (expect: absent) ---
+total 20
+drwx------  3 root root 4096 Oct 25 20:03 .
+drwxr-xr-x 18 root root 4096 Oct 25 20:04 ..
+-rw-r--r--  1 root root  607 Jul 17 17:05 .bashrc
+-rw-r--r--  1 root root  132 Jul 17 17:05 .profile
+drwx------  2 root root 4096 Oct 25 20:05 .ssh
+
+--- 4. /usr/local/bin/.sysupdate (expect: absent) ---
+total 8
+drwxr-xr-x  2 root root 4096 Oct 25 20:03 .
+drwxr-xr-x 11 root root 4096 Oct 25 20:03 ..
+
+--- 5. listening sockets (expect: sshd only) ---
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                       
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=723,fd=6))
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=723,fd=7))
+
+--- 6. suspicious processes (expect: none) ---
+PASS: no payload processes running
+
+--- 7. network isolation retained ---
+192.168.116.0/24 dev enp0s17 proto kernel scope link src 192.168.116.200 
+===============================================================
+===============================================================
+  POST-RESTORE VERIFICATION - reverted to 01-CLEAN-BASELINE
+  verified at 2026-10-27 06:12:44 UTC
+===============================================================
+
+--- 1. root crontab ---
+no crontab for root
+
+--- 2. backdoor account svcupdate ---
+PASS: svcupdate not present in /etc/passwd
+
+--- 3. /root contents (LOOT_MARKER + payloads gone) ---
+total 20
+drwx------  3 root root 4096 Oct 25 20:03 .
+drwxr-xr-x 18 root root 4096 Oct 25 20:04 ..
+-rw-r--r--  1 root root  607 Jul 17 17:05 .bashrc
+-rw-r--r--  1 root root  132 Jul 17 17:05 .profile
+drwx------  2 root root 4096 Oct 25 20:05 .ssh
+
+--- 4. /usr/local/bin (.sysupdate gone) ---
+total 8
+drwxr-xr-x  2 root root 4096 Oct 25 20:03 .
+drwxr-xr-x 11 root root 4096 Oct 25 20:03 ..
+
+--- 5. listening sockets (sshd only) ---
+Netid State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                       
+tcp   LISTEN 0      128          0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=723,fd=6))
+tcp   LISTEN 0      128             [::]:22           [::]:*    users:(("sshd",pid=723,fd=7))
+
+--- 6. network isolation retained ---
+192.168.116.0/24 dev enp0s17 proto kernel scope link src 192.168.116.200 
